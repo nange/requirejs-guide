@@ -1,7 +1,7 @@
 requirejs.config({
   baseUrl: 'js',
   paths: {
-    jqeury: 'lib/jquery-1.11.1',
+    jquery: 'lib/jquery-1.11.1',
 
     page1: 'page/page1',
     page2: 'page/page2',
@@ -10,6 +10,6 @@ requirejs.config({
 
     moduleA: 'module/moduleA',
     moduleB: 'module/moduleB',
-    moduleC: 'module/moduleC'
+    ModuleC: 'module/ModuleC'
   }
 });

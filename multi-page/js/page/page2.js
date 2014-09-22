@@ -1,17 +1,17 @@
 define(['jquery', 'moduleB'], 
-function($, moduleA) {
+function($, moduleB) {
 
   function bindChangeOnInput() {
-    console.log('bind change on input...');
+    alert('page2 bind change on input...');
   }
 
   function bindChangeOnSelect() {
-    console.log('bind change on select...');
+    alert('page2 bind change on select...');
   }
 
   function doSth() {
-    moduleA.do();
-    console.log('do something...');
+    moduleB.do();
+    alert('page2 do something...');
   }
 
   return function() {
