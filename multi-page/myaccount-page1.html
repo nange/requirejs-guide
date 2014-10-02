@@ -3,7 +3,15 @@
   <head>
     <meta charset="utf8">
     <title>Multi Page--myaccount-page1</title>
-    <script src="js/lib/require.js" data-main="js/dist/myaccount"></script>
+    <!-- when you are developing, using below: -->
+    <!-- <script src="js/lib/require.js" data-main="js/myaccount"></script> -->
+
+    <!-- In production env, if you also want to use requirejs to load 'jsfile' async, using below: -->
+    <!-- <script src="js/lib/require.js" data-main="js/dist/myaccount"></script> -->
+
+    <!-- In production env, if you using 'almond' to optimize 'jsfile', using below(this is recommended): -->
+    <script src="js/dist/myaccount.js"></script>
+
   </head>
   <body>
     <h1>Hello World! This page is myaccount-page1...</h1>

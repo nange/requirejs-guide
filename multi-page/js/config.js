@@ -1,15 +1,30 @@
 requirejs.config({
   baseUrl: 'js',
+
   paths: {
     jquery: 'lib/jquery-1.11.1',
+    underscore: 'lib/underscore-min',
+    plugTest: 'lib/jquery.plugTest',
 
-    page1: 'page/page1',
-    page2: 'page/page2',
-    page3: 'page/page3',
-    page4: 'page/page4',
+    personInfo: 'page/personInfo',
+    shippingAddress: 'page/shippingAddress',
+    paymentInfo: 'page/paymentInfo',
+    orderInfo: 'page/orderInfo',
 
     moduleA: 'module/moduleA',
     moduleB: 'module/moduleB',
     ModuleC: 'module/ModuleC'
+
+  },
+
+  shim: {
+    'underscore': {
+      exports: '_'
+    },
+    'plugTest': {
+      deps: ['jquery'],
+      exports: 'jQuery.fn.plugTest'
+    }
   }
+
 });

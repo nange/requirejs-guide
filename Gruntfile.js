@@ -15,6 +15,8 @@ module.exports = function(grunt) {
     requirejs: {
       myaccount: {
         options: {
+          almond: true,
+          wrap: true,
           baseUrl: "./multi-page/js",
           mainConfigFile: "./multi-page/js/config.js",
           findNestedDependencies: true,
@@ -24,6 +26,8 @@ module.exports = function(grunt) {
       },
       checkout: {
         options: {
+          almond: true,
+          wrap: true,
           baseUrl: "./multi-page/js",
           mainConfigFile: "./multi-page/js/config.js",
           findNestedDependencies: true,
@@ -39,6 +43,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-requirejs');
 
   // Default task(s).
-  grunt.registerTask('default', ['connect']);
+  grunt.registerTask('default', ['connect', 'requirejs']);
  
 };

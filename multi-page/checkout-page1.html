@@ -3,7 +3,15 @@
   <head>
     <meta charset="utf8">
     <title>Multi Page--checkout-page1</title>
-    <script src="js/lib/require.js" data-main="js/dist/checkout"></script>
+    <!-- when you are developing, using below: -->
+    <!-- <script src="js/lib/require.js" data-main="js/checkout"></script> -->
+
+    <!-- In production env, if you also want to use requirejs to load 'jsfile' async, using below: -->
+    <!-- <script src="js/lib/require.js" data-main="js/dist/checkout"></script> -->
+
+    <!-- In production env, if you using almond to optimize 'jsfile', using below(this is recommended): -->
+    <script src="js/dist/checkout.js"></script>
+    
   </head>
   <body>
     <h1>Hello World! This page is checkout-page1...</h1>
