@@ -5,7 +5,7 @@
     
 ### Getting started
     
-想要完整测试本项目的中的实例，需要首先安装nodejs和grunt环境(如果不知道怎么安装，请查询相关资料，相信难不倒你)。
+想要完整测试本项目的中的实例，需要首先安装nodejs和grunt环境(不知道如何安装？请点 [这里](http://nodejs.org/) 和 [这里](http://www.gruntjs.net/))。
 安装好后，打开命令行进入项目的根目录中执行：
 ```
 $ npm install
@@ -23,7 +23,7 @@ http://127.0.0.1:8080/multi-page/myaccount-page1.html
 ### List
 
 - [Why Requirejs](#why-requirejs)
-- [Quick Start](#2)
+- [Quick Start](#quick-start)
 - [How to organize the file of project](#How to organize the file of project)
 - [Optimize jsfile](#Optimize jsfile)
 
@@ -34,7 +34,7 @@ some text
 
 
 
-<h4 id="2">Quick Start</h4>
+#### Quick Start
 
 some text
 
