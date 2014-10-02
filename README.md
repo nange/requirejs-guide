@@ -22,7 +22,7 @@ http://127.0.0.1:8080/multi-page/myaccount-page1.html
 
 ### 目录
 
-- [为什么要使用requirejs](为什么要使用requirejs)
+- [为什么要使用requirejs](#为什么要使用requirejs)
 - 快速入门
 - 如何组织项目结构
 - requirejs的压缩合并
