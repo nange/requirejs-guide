@@ -1,8 +1,8 @@
 ﻿// Grunt configuration.
 module.exports = function(grunt) {
-	grunt.initConfig({
-		connect: {
-		  server: {
+  grunt.initConfig({
+    connect: {
+      server: {
         options: {
           keepalive: true,
           hostname: '127.0.0.1',
@@ -10,7 +10,7 @@ module.exports = function(grunt) {
           base: '.'
         }
       }
-		},
+    },
 
     requirejs: {
       myaccount: {
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
       }
     }
 
-	});
+  });
  
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-requirejs');
