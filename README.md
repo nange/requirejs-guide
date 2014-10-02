@@ -22,13 +22,13 @@ http://127.0.0.1:8080/multi-page/myaccount-page1.html
 
 ### List
 
-- [Why Requirejs](#1)
+- [Why Requirejs](#why-requirejs)
 - [Quick Start](#2)
 - [How to organize the file of project](#How to organize the file of project)
 - [Optimize jsfile](#Optimize jsfile)
 
 
-<h4 id="1">Why Requirejs</h4>
+#### Why Requirejs
 
 some text
 
