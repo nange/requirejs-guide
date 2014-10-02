@@ -6,7 +6,6 @@
 ### Getting started
     
 想要完整测试本项目的中的实例，需要首先安装nodejs和grunt环境 (不知道如何安装？请点 [这里](http://nodejs.org/) 和 [这里](http://www.gruntjs.net/))。
-
 安装好后，打开命令行进入项目的根目录中执行：
 ```
 $ npm install
