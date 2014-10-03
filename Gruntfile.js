@@ -43,6 +43,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-requirejs');
 
   // Default task(s).
-  grunt.registerTask('default', ['connect', 'requirejs']);
+  grunt.registerTask('default', ['requirejs', 'connect']);
  
 };
