@@ -86,15 +86,44 @@ requirejs(['jquery', 'moduleA'], function($, moduleA) {
 
 });
 ```
+requirejs.config是对requirejs执行环境相关的配置，其实``` requirejs.config ``` 和 ``` require.config ```是等效的。
 
+1. baseUrl 配置查询其他文件的根目录。这里配置成了js目录。
+2. paths 对于那些没有直接存放在baseUrl下面的模块，提供一个便捷的访问，可以是目录或者文件。
+   比如这里配置的jquery，moduleA等等，我们就可以直接在代码里面使用，而不需要从baseUrl的根目录开始，
+   就像``` requirejs(['jquery', 'moduleA'], function($, moduleA) { ... }); ``` 这样。
 
+接下来的代码``` requirejs(['jquery', 'moduleA'], function($, moduleA) { ... }); ```就是真正的调用了，
+jquery和moduleA都是我们已经配置好的模块，它们被映射为了后面function的$和moduleA参数。如你所想:
+``` 
+require(['jquery', 'moduleA'], function($, moduleA) { ... });
+``` 
+和上面的调用是等效的。
 
-ps：使用相对路径定义入口的时候，不要在末尾加上后缀.js，requirejs会为我们自动加上。
+内部机理：RequireJS使用head.appendChild()将每一个依赖加载为一个script标签。
+RequireJS会等待所有的依赖加载完毕，计算出模块定义函数正确调用顺序，然后依次调用它们。
+
+如果你理解了这样的机制，就能明白 Expected results(you should know why?) 的结果。
+
+*ps：使用相对路径定义入口的时候，不要在末尾加上后缀.js，requirejs会为我们自动加上。*
 
 
 #### How to organize the file of project
 
-some text
+以何种方式组织文件是有挑战性的，一般来说我们可以很容易的达成一个共识：
+对于中小型项目(如网站页面在20个以内)，采用single-page的形式，全站用一个js文件作为入口文件就ok了。
+对于中大型项目(如网站页面在50个以上)，如果继续用一个js文件作为入口，自然就会感觉这个文件太大了，
+通常我们就会想站在网站大的模块角度进行一次拆分，比如myaccount, checkout等等， 
+也就是myaccount有一个js文件作为入口，而checkout有另外一个入口，这就是所谓的multi-page形式。
+
+现在我们正在做的Ferguson项目，采用的就是multi-page形式，但是即使我们采用multi-page形式，现在依旧出现了代码难以维护的窘境。
+具体问题表现在：入口文件代码量太大，一个入口文件代码量可能高达2000+行之多，即使是在已经把公共的模块提取出来作为单独的文件了。
+
+解决很多大型问题有一个很好用的方法：添加一个抽象层。 我们可以添加一个page层解决入口文件代码量过大的问题。
+之前其实只有两层：入口层 ——> 公共模块层。 现在我们引入page层，就变成了这样的三层结构：入口层 ——> page层 ——> 公共模块层。
+就像这样：
+![目录结构](https://raw.githubusercontent.com/nange/requirejs-guide/master/img/multi-page-structure.png)
+
 
 
 
