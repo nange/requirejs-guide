@@ -106,7 +106,7 @@ RequireJS会等待所有的依赖加载完毕，计算出模块定义函数正�
 
 如果你理解了这样的机制，就能明白 Expected results(you should know why?) 的结果。
 
-*ps：使用相对路径定义入口的时候，不要在末尾加上后缀.js，requirejs会为我们自动加上。*
+* ps：使用相对路径定义入口的时候，不要在末尾加上后缀.js，requirejs会为我们自动加上。*
 
 
 #### How to organize the file in project
