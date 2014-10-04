@@ -23,6 +23,7 @@ requirejs(['jquery', 'moduleA'], function($, moduleA) {
     console.log('4. moduleA is executed!');
     console.log('5. moduleB is saying...');
     console.log('6. document is ready...');
+    console.log('7. moduleA is saying...');
   });
 
 });
