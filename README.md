@@ -136,7 +136,7 @@ RequireJS会等待所有的依赖加载完毕，计算出模块定义函数正�
 
 最后当上生产环境时，一般来说会压缩js文件，主要目的是减少http请求数和总的文件大小。压缩基于requirejs写的代码有两种方式：
 
-1. 使用和requirejs配套的r.js。 r.js是吧入口文件所依赖的所有模块以及入口文件本身压缩到一个文件里面，
+1. 使用和requirejs配套的r.js。 r.js是把入口文件所依赖的所有模块以及入口文件本身压缩到一个文件里面，
 然后把data-main设置为这个压缩后的文件即可。完整文档请点[这里](https://github.com/jrburke/r.js)。
 2. 使用requirejs作者写的另外一个工具almond。 使用这个工具，可以让我们在生产环境中完全抛弃requirejs，
 它是把入口文件以及其所依赖的文件，再加上requirejs全部压缩进一个文件(其实不是把requirejs也压缩进去了，
