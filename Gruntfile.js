@@ -29,9 +29,9 @@ module.exports = function(grunt) {
       checkout: {
         options: {
           almond: true,
-          wrap: true, // 兼容非标准的rquirejs模块
+          wrap: true, 
           preserveLicenseComments: false,
-          wrapShim: true,
+          wrapShim: true, // 兼容非标准的rquirejs模块
           baseUrl: "./multi-page/js",
           mainConfigFile: "./multi-page/js/config.js",
           findNestedDependencies: true,
