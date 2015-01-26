@@ -5,6 +5,7 @@ requirejs.config({
     jquery: 'lib/jquery-1.11.1',
     underscore: 'lib/underscore-min',
     plugTest: 'lib/jquery.plugTest',
+    Handlebars: 'lib/handlebars',
 
     personInfo: 'page/personInfo',
     shippingAddress: 'page/shippingAddress',
@@ -22,6 +23,9 @@ requirejs.config({
   shim: {
     'underscore': {
       exports: '_'
+    },
+    'Handlebars': {
+      exports: 'Handlebars'
     },
     'plugTest': {
       deps: ['jquery'],

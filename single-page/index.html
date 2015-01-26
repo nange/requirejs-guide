@@ -3,9 +3,18 @@
   <head>
     <meta charset="utf8">
     <title>Single Page</title>
-    <script src="js/lib/require.js" data-main="js/main"></script>
+    <script src="js/lib/require.js" data-main="js/main2"></script>
   </head>
   <body>
     <h1>Hello World!</h1>
+	<script>
+	define('myModule', ['jquery'], function($){
+		$(function() {
+			alert('xxxxxxxxxxxxxxxx');
+		})
+	});
+	
+	require(['main2'], function() { require(['myModule']); });
+	</script>
   </body>
 </html>
